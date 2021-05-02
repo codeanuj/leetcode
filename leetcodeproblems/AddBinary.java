@@ -18,12 +18,14 @@ class Solution {
             sum+= (i>=0?Integer.parseInt(String.valueOf(a.charAt(i))):Integer.parseInt("0"));
             sum+= (j>=0?Integer.parseInt(String.valueOf(b.charAt(j))):Integer.parseInt("0"));
             
+            //sum is 0 or 2 then append 0 
+            //else 1
             if(sum%2==0){
                 result.append("0");
             }else{
                 result.append("1");
             }
-            
+            //sum is greater than 1 means take carry
             if(sum>1){
                 carry=1;
             }else{
