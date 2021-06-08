@@ -1,4 +1,4 @@
-class Solution {
+class ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {
         
         List<List<Integer>> result = new ArrayList<List<Integer>>();
@@ -10,6 +10,7 @@ class Solution {
             if(i==0 ||(i>0 && nums[i-1]!=nums[i])){
                 int low= i+1;
                 int high= nums.length-1;
+                //looking triplet a+b+c=0
                 int sum=0-nums[i];
                 
                 while(low<high){
