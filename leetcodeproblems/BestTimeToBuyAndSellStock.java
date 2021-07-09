@@ -1,6 +1,8 @@
 class Solution {
     public int maxProfit(int[] prices) {
        
+        // First approach
+        
         
         //create auxillary array with maxLeft and minRight
         int maxLeft[]=new int[prices.length];
@@ -25,6 +27,21 @@ class Solution {
         
         return profit;
         
+        //second approach
+        
+         int min=Integer.MAX_VALUE;
+         int profit=0;
+  
+    //you will just assume that you sell the stock everyday and find the difference between current day price
+    //and the minimum price you have seen so far
+    
+       for(int i=0; i<prices.length; i++){
+        
+        min =Math.min(min, prices[i]);
+        profit= Math.max(profit, prices[i]-min);
+    }
+    
+    return profit;
         
     }
 }
